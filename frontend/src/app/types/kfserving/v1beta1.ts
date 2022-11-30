@@ -42,6 +42,7 @@ export enum PredictorType {
   Pmml = 'pmml',
   Lightgbm = 'lightgbm',
   Custom = 'custom',
+  Paddle = 'paddle',
 }
 
 export interface PredictorSpec extends V1PodSpec, ComponentExtensionSpec {
@@ -54,6 +55,7 @@ export interface PredictorSpec extends V1PodSpec, ComponentExtensionSpec {
   pmml?: PredictorExtensionSpec;
   lightgbm?: PredictorExtensionSpec;
   model?: ModelSpec;
+  paddle?: PredictorExtensionSpec;
 }
 
 export interface ModelSpec extends PredictorExtensionSpec {
